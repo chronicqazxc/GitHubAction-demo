@@ -32,6 +32,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Check folder
+  wayne-test:
+    runs-on: macos-latest
+    steps:
+      - name: 🔐 Check folder
         run: |
           ls -al
+      - name: 🌍 Check location
+        run: pwd
