@@ -31,12 +31,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+
   wayne-test:
     runs-on: macos-latest
     steps:
-      - name: 🔐 Check folder
-        run: |
-          ls -al
+      - name: 🌍 check
+        uses: actions/checkout@v2
+      - name: 🌍 Bundle install
+        run: bundle install --jobs 8
+      - name: 🌍 Build and test
+        run: bundle exec fastlane custom_lane
       - name: 🌍 Check location
         run: pwd
