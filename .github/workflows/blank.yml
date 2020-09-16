@@ -43,3 +43,11 @@ jobs:
         run: bundle exec fastlane custom_lane
       - name: 🌍 Check location
         run: pwd
+      - name: 🌍 Make directory
+        run: mkdir -p world.txt
+      - name: 🌍 Make artifacte
+        run: echo hello > world.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: world.txt
