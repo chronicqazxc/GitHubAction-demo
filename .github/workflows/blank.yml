@@ -44,7 +44,7 @@ jobs:
       - name: 🌍 Check location
         run: pwd
       - name: 🌍 Make directory
-        run: mkdir -p world.txt
+        run: touch world.txt
       - name: 🌍 Make artifacte
         run: echo hello > world.txt
       - uses: actions/upload-artifact@v2
