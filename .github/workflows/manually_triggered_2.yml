@@ -1,9 +1,9 @@
-name: Manually triggered workflow 2
+name: Show Xcode version
 on:
   workflow_dispatch:
 
 jobs:
   say_hello:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
-    - run: echo "Manually triggered workflow 2"
+    - run: ls -n /Applications/ | grep Xcode*
