@@ -6,4 +6,7 @@ jobs:
   show_xcode_version:
     runs-on: macos-latest
     steps:
-    - run: ls /Applications/ | grep Xcode
+    - name: Grep Xcode
+      run: ls /Applications/ | grep Xcode
+    - name: Select Xcode 11.7
+      run: sudo xcode-select -s /Applications/Xcode_11.7.app/Contents/Developer
