@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  say_hello:
+  show_xcode_version:
     runs-on: macos-latest
     steps:
-    - run: ls -n /Applications/ | grep Xcode*
+    - run: ls /Applications/ | grep Xcode
